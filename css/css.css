@@ -1,0 +1,376 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: white;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+body,p,div,span,input,img,li,ul{
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(200,200,200,0);
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*Center slide text vertically*/
+    /*display: -webkit-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+    /*-webkit-box-pack: center;*/
+    /*-ms-flex-pack: center;*/
+    /*-webkit-justify-content: center;*/
+    /*justify-content: center;*/
+    /*-webkit-box-align: center;*/
+    /*-ms-flex-align: center;*/
+    /*-webkit-align-items: center;*/
+    /*align-items: center;*/
+}
+#musicBg{
+    width: 11%;
+    height: auto;
+    position: fixed;
+    right: 3%;
+    top: 4%;
+    z-index: 100;
+}
+.rotate{
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite
+}
+@-webkit-keyframes rotating {
+    from { -webkit-transform: rotate(0) }
+    to { -webkit-transform: rotate(360deg) }
+}
+
+@keyframes rotating {
+    from { transform: rotate(0) }
+    to { transform: rotate(360deg) }
+}
+@-moz-keyframes rotating {
+    from { -moz-transform: rotate(0) }
+    to { -moz-transform: rotate(360deg) }
+}
+#music{
+    position: fixed;
+    width: 4%;
+    height: auto;
+    left: 89%;
+    top: 6%;
+    z-index: 101;
+}
+.page1{
+    background-image: url(../img/page1/page1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#btn-begin,#btn-begin2{
+    background: url('../img/page1/kscs.png') no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    width: 34%;
+    height: 9%;
+    left: 33%;
+    top: 86%;
+}
+#btn-begin{
+    -webkit-animation: big 2s linear infinite;
+}
+@-webkit-keyframes big {
+    50%{-webkit-transform:scale(1.05);}
+}
+#btn-begin2{
+    top: 57%;
+    display: none;
+}
+.qus1{
+    background-image: url(../img/q1/q1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.dsj{
+    width: 84%;
+    position: absolute;
+    top: 8%;
+    left: 8%;
+}
+.answerBox,.answerBox2{
+    position: absolute;
+    width: 84%;
+    height: 30%;
+    top: 60%;
+    left: 8%;
+    z-index:99;
+}
+.answerBox div{
+    width: 100%;
+    height: 18%;
+    float: left;
+    margin-top: 3%;
+    background-color: white;
+}
+.answerBox2 div{
+    width: 100%;
+    height: 18%;
+    float: left;
+}
+.jxdt{
+    background: url('../img/public/xyt.png') no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    width: 34%;
+    height: 9%;
+    left: 33%;
+    top: 89%;
+}
+.qus2{
+    background: url(../img/q2/q2.jpg);
+    background-size: 100% 100%;
+}
+.qus3{
+    background: url(../img/q3/q3.jpg);
+    background-size: 100% 100%;
+}
+.qus4{
+    background: url(../img/q4/q4.jpg);
+    background-size: 100% 100%;
+}
+.qus5{
+    background: url(../img/q5/q5.jpg);
+    background-size: 100% 100%;
+}
+.page7{
+    background: url(../img/page7/page7.jpg);
+    background-size: 100% 100%;
+}
+.btn-box{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 59%;
+    z-index: 99;
+}
+.btn-box img{
+    width: 27%;
+    height: auto;
+    margin-left: 3%;
+}
+.qus1-text{
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: 26%;
+    left: 19%;
+}
+.qus2-text{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 28%;
+    left: 16%;
+}
+.qus3-text{
+    width: 49%;
+    height: auto;
+    position: absolute;
+    top: 23%;
+    left: 17%;
+}
+.qus4-text,.qus5-text{
+    width: 49%;
+    height: auto;
+    position: absolute;
+    top: 24%;
+    left: 17%;
+}
+.mask,.mask2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #08081f;
+    top: 0;
+    opacity: 0.95;
+    display: none;
+}
+.mask2{
+    z-index:998;
+}
+.xinxi{
+    width: 90%;
+    height: 28%;
+    position: absolute;
+    background: url('../img/page1/xinxi.png') no-repeat;
+    background-size: 100% auto;
+    top: 27%;
+    left: 5%;
+    display: none;
+}
+.quan,.dian{
+    width: 3.5%;
+    position: absolute;
+    height: auto;
+    top: 32%;
+    left: 10%;
+}
+.dian{
+    display: none;
+}
+.answer-quan{
+    width: 5%;
+    height: auto;
+    margin-left: 86%;
+    margin-top: 2%;
+}
+.cy{
+    width: 31%;
+    height: 19%;
+    position: absolute;
+    top: 51%;
+    background: url('../img/page1/cy.png') no-repeat;
+    background-size: 100% auto;
+}
+.gz{
+    width: 31%;
+    height: 19%;
+    position: absolute;
+    top: 51%;
+    left: 70%;
+    background: url('../img/page1/gz.png') no-repeat;
+    background-size: 100% auto;
+}
+@font-face {
+    font-family: font1; /*这里是说明调用来的字体名字*/
+    src: url('font.otf'); /*这里是字体文件路径*/
+}
+#num1,#num2{
+    color: #86c1f3;
+    font-family: font1;
+    position: relative;
+    font-size: 1rem;
+}
+#num1{
+    top: 56%;
+    left: 2%;
+}
+#num2{
+    top: 57%;
+}
+.random1{
+    color: #86c1f3;
+    position: absolute;
+    top: 55.3%;
+    left: 4%;
+    font-size: 0.7rem;
+}
+.random2{
+    color: #86c1f3;
+    position: absolute;
+    top: 55.5%;
+    left: 92%;
+    font-size: 0.7rem;
+}
+.random3{
+    color: #86c1f3;
+    position: absolute;
+    top: 1.8%;
+    left: 85.5%;
+    font-size: 0.7rem;
+    z-index: 1000;
+    display: none;
+}
+.anm1,.anm2,.anm3{
+    position: fixed;
+    z-index: 88;
+    display: none;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite
+}
+.anm1{
+    width: 20%;
+    height: auto;
+    top: 88%;
+    right:0 ;
+
+}
+.anm2{
+    width: 19%;
+    height: auto;
+    top: 58%;
+    right:8% ;
+}
+.anm3{
+    width: 23%;
+    height: auto;
+    top: 83%;
+    left:2% ;
+}
+.score{
+    width: 51%;
+    position: absolute;
+    top: 23%;
+    left: 16%;
+}
+.hb{
+    position: absolute;
+    left: 24%;
+    top: 68%;
+    width: 44%;
+    height: auto;
+}
+.bs{
+    position: absolute;
+    left: 24%;
+    top: 68%;
+    width: 40%;
+    height: auto;
+}
+.ky{
+    position: absolute;
+    left: 20%;
+    top: 71%;
+    width: 50%;
+    height: auto;
+}
+.hl,.sa{
+    position: absolute;
+    left: 26%;
+    top: 69%;
+    width: 39%;
+    height: auto;
+}
+.slj{
+    position: absolute;
+    left: 18%;
+    top: 69%;
+    width: 55%;
+    height: auto;
+}
+#myCanvas{
+    position: absolute;
+    top: 21%;
+    left: 16%;
+    z-index: 999;
+    display: none;
+}
+.fx{
+    position: absolute;
+    width: 88%;
+    z-index: 999;
+    height: auto;
+    left: 12%;
+    top:-2%;
+    display: none;
+}

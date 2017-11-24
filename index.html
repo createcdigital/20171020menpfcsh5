@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NIVEA MEN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/alert.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?27045ebc30e102f1e1175a1fdd682dd0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/md5.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body>
+<img id="musicBg" class="rotate" src="img/music/musicBg.png" alt="">
+<img id="music" src="img/music/music.png" alt="">
+<canvas id='myCanvas'></canvas>
+<!--<audio loop src="#" id="media" autoplay="" preload=""></audio>-->
+<!-- Swiper -->
+<img class="anm1" src="img/public/1.png" alt="">
+<img class="anm2" src="img/public/2.png" alt="">
+<img class="anm3" src="img/public/3.png" alt="">
+<div class="swiper-container swiper-container-v">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide page1 stop-swiping">
+            <div id="btn-begin"></div>
+            <p class="random1">干燥</p>
+            <div class="cy">
+                <p id="num1">00</p>
+            </div>
+            <p class="random2">干燥</p>
+            <div class="gz">
+                <p id="num2">00</p>
+            </div>
+            <div class="mask"></div>
+            <div class="xinxi">
+                <img style="left: 5%" class="quan age" src="img/public/quan.png" alt="">
+                <img style="left: 28%" class="quan age" src="img/public/quan.png" alt="">
+                <img style="left: 52%" class="quan age" src="img/public/quan.png" alt="">
+                <img style="left: 75%" class="quan age" src="img/public/quan.png" alt="">
+                <img style="top:71%;left: 37%" class="quan sex" src="img/public/quan.png" alt="">
+                <img style="top: 71%;left: 55%" class="quan sex" src="img/public/quan.png" alt="">
+                <img style="left: 5%" class="dian age1" src="img/public/dian.png" alt="">
+                <img style="left: 28%" class="dian age1" src="img/public/dian.png" alt="">
+                <img style="left: 52%" class="dian age1" src="img/public/dian.png" alt="">
+                <img style="left: 75%" class="dian age1" src="img/public/dian.png" alt="">
+                <img style="top:71%;left: 37%" class="dian sex1" src="img/public/dian.png" alt="">
+                <img style="top: 71%;left: 55%" class="dian sex1" src="img/public/dian.png" alt="">
+            </div>
+            <div id="btn-begin2"></div>
+        </div>
+        <div class="swiper-slide qus1 stop-swiping">
+            <img class="dsj" src="img/public/dsj.png" alt="">
+            <img class="qus1-text" src="img/q1/qus1.png" alt="">
+            <div id="question1" class="answerBox">
+                <div score="0" ans="一次" style="margin-top: 0;background: url('img/q1/a1.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="两次" style="background: url('img/q1/a2.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="3" ans="三次以上" style="background: url('img/q1/a3.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="4" ans="看心情" style="background: url('img/q1/a4.png') no-repeat;background-size: 100% auto;"></div>
+            </div>
+            <div onclick="answerFun(1)" class="jxdt"></div>
+        </div>
+        <div class="swiper-slide qus2 stop-swiping">
+            <img class="dsj" src="img/public/dsj.png" alt="">
+            <img class="qus2-text" src="img/q2/qus2.png" alt="">
+            <div id="question2" class="answerBox">
+                <div score="0" ans="擦干后有紧绷感" style="margin-top: 0;background: url('img/q2/a1.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="刚好，清爽舒适" style="background: url('img/q2/a2.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="3" ans="很快T区额头又出油了" style="background: url('img/q2/a3.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="4" ans="我为什么这么帅？" style="background: url('img/q2/a4.png') no-repeat;background-size: 100% auto;"></div>
+            </div>
+            <div onclick="answerFun(2)" class="jxdt"></div>
+        </div>
+        <div class="swiper-slide qus3 stop-swiping">
+            <img class="dsj" src="img/public/dsj.png" alt="">
+            <img class="qus3-text" src="img/q3/qus3.png" alt="">
+            <div id="question3" class="answerBox2">
+                <div score="0" ans="不紧绷不干燥，滋润舒适" style="background: url('img/q3/a1.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="改善暗沉，肤色更亮" rec="hb" style="background: url('img/q3/a2.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="精神焕发，一扫疲态" rec="hl" style="background: url('img/q3/a3.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="3" ans="告别大油田，痘痘黑头退散" style="background: url('img/q3/a4.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="4" ans="这是一张完美无缺的脸" style="background: url('img/q3/a5.png') no-repeat;background-size: 100% auto;"></div>
+            </div>
+            <div onclick="answerFun(3)" class="jxdt"></div>
+        </div>
+        <div class="swiper-slide qus4 stop-swiping">
+            <img class="dsj" src="img/public/dsj.png" alt="">
+            <img class="qus4-text" src="img/q4/qus4.png" alt="">
+            <div id="question4" class="answerBox">
+                <div score="0" ans="全年都会用专业男士护肤品" style="margin-top: 0;background: url('img/q4/a1.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="冬天会用护肤乳液或霜" style="background: url('img/q4/a2.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="2" ans="夏天会用防晒" style="background: url('img/q4/a3.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="4" ans="坐等妹子来改造我" style="background: url('img/q4/a4.png') no-repeat;background-size: 100% auto;"></div>
+            </div>
+            <div onclick="answerFun(4)" class="jxdt"></div>
+        </div>
+        <div class="swiper-slide qus5 stop-swiping">
+            <img class="dsj" src="img/public/dsj.png" alt="">
+            <img class="qus5-text" src="img/q5/qus5.png" alt="">
+            <div id="question5" class="answerBox2">
+                <div score="0" ans="温和，肤感舒适不刺激" rec="sa" style="background: url('img/q5/a1.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="滋润，皮肤不紧绷有弹性" style="background: url('img/q5/a2.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="1" ans="精神，活力振奋神采奕奕" style="background: url('img/q5/a3.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="3" ans="清爽，彻底清洁不泛油光" style="background: url('img/q5/a4.png') no-repeat;background-size: 100% auto;"></div>
+                <div score="4" ans="女神给我涂，用啥都舒服" style="background: url('img/q5/a5.png') no-repeat;background-size: 100% auto;"></div>
+            </div>
+            <div onclick="answerFun(5)" class="jxdt" style="background: url('img/public/wccs.png') no-repeat;background-size: 100% auto;"></div>
+        </div>
+        <div class="swiper-slide page7 stop-swiping">
+            <div class="mask2"></div>
+            <p class="random3">干燥</p>
+            <img class="fx" src="img/page7/fx.png" alt="">
+            <img class="dsj" src="img/public/dsj.png" alt="">
+            <div class="btn-box">
+                <img id="share" style="margin-left: 0;" src="img/page7/bbsgw.png" alt="">
+                <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx36310fe660ca89bd&redirect_uri=http%3A%2F%2Fnivea.sweetmartmarketing.com%2FcrmSrv%2Fwx%2FzexWxNvy%3fappid%3dwx36310fe660ca89bd&response_type=code&scope=snsapi_userinfo&state=wx&component_appid=wx757dd6d09794aee2#wechat_redirect"><img src="img/page7/jrhy.png" alt=""></a>
+                <img id="again" src="img/page7/zcyc.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/alert.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

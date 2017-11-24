@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NIVEA MEN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        //获取url参数
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if ( r != null ){
+                return decodeURI(r[2]);
+            }else{
+                return null;
+            }
+        }
+
+        if(getQueryString('score')){
+            var url = "http://niveamen.watchinga.net/pfcscs/index.html&score="+getQueryString('score')+"&rec="+getQueryString('rec')+"";
+            url = encodeURIComponent(url);
+//            window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3c47e7bd3bbaa405&redirect_uri=http%3A%2F%2Fdev-web.sweetmartmarketing.com%2FcrmSrv%2Fwx%2FzexWxNvy%3fappid%3dwx3c47e7bd3bbaa405%26url%3d"+url+"&response_type=code&scope=snsapi_base&state=url&component_appid=wx39aa07158eb92ac1#wechat_redirect";
+            window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx36310fe660ca89bd&redirect_uri=http%3A%2F%2Fnivea.sweetmartmarketing.com%2FcrmSrv%2Fwx%2FzexWxNvy%3fappid%3dwx36310fe660ca89bd%26url%3d"+url+"&response_type=code&scope=snsapi_base&state=url&component_appid=wx757dd6d09794aee2#wechat_redirect";
+        }else {
+//            window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3c47e7bd3bbaa405&redirect_uri=http%3A%2F%2Fdev-web.sweetmartmarketing.com%2FcrmSrv%2Fwx%2FzexWxNvy%3fappid%3dwx3c47e7bd3bbaa405%26url%3dhttp%3A%2F%2Fniveamen.watchinga.net/pfcscs/index.html&response_type=code&scope=snsapi_base&state=url&component_appid=wx39aa07158eb92ac1#wechat_redirect';
+            window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx36310fe660ca89bd&redirect_uri=http%3A%2F%2Fnivea.sweetmartmarketing.com%2FcrmSrv%2Fwx%2FzexWxNvy%3fappid%3dwx36310fe660ca89bd%26url%3dhttp%3A%2F%2Fniveamen.watchinga.net/pfcscs/index.html&response_type=code&scope=snsapi_base&state=url&component_appid=wx757dd6d09794aee2#wechat_redirect';
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
