@@ -20,3 +20,8 @@ $age = $_POST['age'];
 if(isset($sex)){
     $res = mysqli_query($link,"insert into pfcs_user (sex,age) values('{$sex}','{$age}');");//存入数据库
 }
+
+
+
+
+
